@@ -6,14 +6,24 @@
     <array>
         <string>fountain</string>
     </array>
+
     <key>firstLineMatch</key>
     <string>^[A-Z]+$</string>
+
     <key>foldingStartMarker</key>
     <string>^\s+</string>
+
     <key>foldingStopMarker</key>
     <string>^$</string>
+
     <key>name</key>
     <string>Fountainhead</string>
+
+    <key>scopeName</key>
+    <string>text.fountain</string>
+
+    <key>uuid</key>
+    <string>601e72e1-41ed-417f-83ae-d7e3e325609f</string>
 
 
     <key>patterns</key>
@@ -57,6 +67,20 @@
         <dict>
             <key>include</key>
             <string>#character_list</string>
+        </dict>
+
+        <!-- Choices -->
+        <dict>
+            <key>include</key>
+            <string>#choices</string>
+        </dict>
+        <dict>
+            <key>include</key>
+            <string>#line_x</string>
+        </dict>
+        <dict>
+            <key>include</key>
+            <string>#end_of_line_x</string>
         </dict>
 
         <!-- Dialogue -->
@@ -136,14 +160,70 @@
             <key>end</key>
             <string>\*/</string>
         </dict>
+
+        <key>choices</key>
+        <dict>
+            <key>begin</key>
+            <string>(^\s*(CHOICES|CONDITION):\s*$)</string>
+            <key>end</key>
+            <string>^$</string>
+            <key>beginCaptures</key>
+            <dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <!-- <string>entity.name.class</string> -->
+                    <string>keyword.operator</string>
+                </dict>
+            </dict>
+            <key>patterns</key>
+            <array>
+                <dict>
+                    <key>name</key>
+                    <string>keyword.operator</string>
+                    <key>begin</key>
+                    <string>(^\s*\[(LINE|CON) [A-Z]\])</string>
+                    <key>end</key>
+                    <string>: </string>
+                </dict>
+                <dict>
+                    <key>name</key>
+                    <string>variable.parameter</string>
+                    <key>begin</key>
+                    <string>\[\[\s*(?=\S)</string>
+                    <key>end</key>
+                    <string>\]\]</string>
+                </dict>
+            </array>
+        </dict>
+
+        <key>line_x</key>
+        <dict>
+            <key>name</key>
+            <string>keyword.operator</string>
+            <key>begin</key>
+            <string>^\s*\[(LINE|CON) [A-Z]:\s*$</string>
+            <key>end</key>
+            <string>^$</string>
+        </dict>
         
+        <key>end_of_line_x</key>
+        <dict>
+            <key>name</key>
+            <string>keyword.operator</string>
+            <key>begin</key>
+            <string>^\s*END OF (LINE|CON) [A-Z]\]:\s*$</string>
+            <key>end</key>
+            <string>^$</string>
+        </dict>
+
         <key>dialogue</key>
         <dict>
             <key>name</key>
             <!-- <string>string</string> -->
             <string>dialogue</string>
             <key>begin</key>
-            <string>(^\s*(@.*$|[A-Z0-9ÂÃÄÀÁÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖŐØÙÚÛÜŰÝßАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏѠѢѤѦѨѪѬѮѰѲѴѶѸѺѼѾҀҌҎҐҒҔҖҘҚҜҞҠҢҤҦҨҪҬҮҰҲҴҶҸҺҼҾӀӁӃӇӋӐӒӔӖӘӚӜӞӠӢӤӦӨӪӬӮӰӲӴӸ#]([A-Z0-9ÂÃÄÀÁÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖŐØÙÚÛÜŰÝßАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏѠѢѤѦѨѪѬѮѰѲѴѶѸѺѼѾҀҌҎҐҒҔҖҘҚҜҞҠҢҤҦҨҪҬҮҰҲҴҶҸҺҼҾӀӁӃӇӋӐӒӔӖӘӚӜӞӠӢӤӦӨӪӬӮӰӲӴӸ# :().'\-]*[\!\?]*(\(.*\))*(\s*\^)?$)))</string>
+            <string>(^\s*(@.*$|[A-Z0-9ÂÃÄÀÁÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖŐØÙÚÛÜŰÝßАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏѠѢѤѦѨѪѬѮѰѲѴѶѸѺѼѾҀҌҎҐҒҔҖҘҚҜҞҠҢҤҦҨҪҬҮҰҲҴҶҸҺҼҾӀӁӃӇӋӐӒӔӖӘӚӜӞӠӢӤӦӨӪӬӮӰӲӴӸ#]([A-Z0-9ÂÃÄÀÁÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖŐØÙÚÛÜŰÝßАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏѠѢѤѦѨѪѬѮѰѲѴѶѸѺѼѾҀҌҎҐҒҔҖҘҚҜҞҠҢҤҦҨҪҬҮҰҲҴҶҸҺҼҾӀӁӃӇӋӐӒӔӖӘӚӜӞӠӢӤӦӨӪӬӮӰӲӴӸ# ().'\-]*[\!\?]*(\(.*\))*(\s*\^)?$)))</string>
             <key>end</key>
             <string>^$</string>
             <key>beginCaptures</key>
@@ -460,9 +540,5 @@
         </dict>
 
     </dict>
-    <key>scopeName</key>
-    <string>text.fountain</string>
-    <key>uuid</key>
-    <string>601e72e1-41ed-417f-83ae-d7e3e325609f</string>
 </dict>
 </plist>

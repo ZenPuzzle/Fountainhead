@@ -22,13 +22,6 @@ John August gives a great explanation on [the benefits of writing in Fountain.](
 
 ## Installation
 
-### Option A: Package Control
-1. Download and install [Sublime Text](http://www.sublimetext.com).
-- Install [Package Control](https://sublime.wbond.net/installation).
-- Select **Package Control: Install Package** from `Tools > Command Palette` (⇧⌘P / ⇧⌃P).
-- Select **Fountainhead**.
-
-### Option B: GitHub
 1. Download and install [Sublime Text](http://www.sublimetext.com).
 - [Download the ZIP of this repository](https://github.com/derickc/Fountainhead/archive/master.zip) and uncompress it.
 - Move the uncompressed **Fountainhead** folder to the appropriate packages directory:

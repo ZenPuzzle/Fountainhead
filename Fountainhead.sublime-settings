@@ -97,7 +97,7 @@
     "scenes": true,
 
     // Automatically add (CONT'D) to character names
-    "contd": true,
+    "contd": false,
 
     // Add a blank line (double line space) after dialogue (lyrics have single line spaces)
     "dialogue_double_line_space": true,
