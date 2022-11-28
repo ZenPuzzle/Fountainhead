@@ -1,6 +1,7 @@
-# Fountainhead
+# Fountainhead ChatFiction
 
 Contextual screenwriting environment that leverages the speed of [Sublime Text](http://www.sublimetext.com) and the readability of [Fountain](http://fountain.io), enabling the user to just write.
+This particular fork supports interactive fiction-specific commands.
 
 Inspired by Jonathan Poritsky's [Fountain for Sublime Text](https://github.com/poritsky/fountain-sublime-text) package.
 
@@ -23,7 +24,7 @@ John August gives a great explanation on [the benefits of writing in Fountain.](
 ## Installation
 
 1. Download and install [Sublime Text](http://www.sublimetext.com).
-- [Download the ZIP of this repository](https://github.com/derickc/Fountainhead/archive/master.zip) and uncompress it.
+- [Download the ZIP of this repository](https://github.com/ZenPuzzle/FountainheadChatFiction/archive/master.zip) and uncompress it.
 - Move the uncompressed **Fountainhead** folder to the appropriate packages directory:
     - In Sublime Text, select: `Sublime Text > Preferences > Browse Packages...`
     - Place the **Fountainhead** folder inside the open **Packages** directory.
