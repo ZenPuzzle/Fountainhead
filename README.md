@@ -91,13 +91,10 @@ Sections | Start line with one or more: `#`
 "Sequence" Section | Start line with: `##` **Sequence**
 "Scene" Section | Start line with: `###` **Scene**
 Synopses | Start line with: `=`
-Centered Text | `>`**Centered Text**`<`
 Page Breaks | Line that only contains three or more consecutive equal signs: `===`
 Line Breaks | Lines can be broken up by using carriage returns
-Italics | `*`*Italic Text*`*`
+Italics | `__`*Italic Text*`__`
 Bold | `**`**Bold Text**`**`
-Bold Italics | `***`***Bold Italic Text***`***`
-Underline | `_`**Underline Text**`_`
 \* | `\*`
 Title Page | Title Page Key that ends with `:` and precedes its value (*Each key can have multiple values by placing them on newlines that are indented 3+ spaces or by a tab*)
 Title: | `Title:` **Title**
