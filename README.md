@@ -1,26 +1,3 @@
-# Fountainhead ChatFiction
-
-Contextual screenwriting environment that leverages the speed of [Sublime Text](http://www.sublimetext.com) and the readability of [Fountain](http://fountain.io), enabling the user to just write.
-This particular fork supports interactive fiction-specific commands.
-
-Inspired by Jonathan Poritsky's [Fountain for Sublime Text](https://github.com/poritsky/fountain-sublime-text) package.
-
-Compatible with Sublime Text [2](http://www.sublimetext.com) and [3](http://www.sublimetext.com/3). Optimized for [Sublime Text 3](http://www.sublimetext.com/3).
-
-Help documentation can also be found within Sublime Text at: `Tools > Fountainhead > Help`.
-
-*Note: Even though Sublime Text 3 is in beta, it is extremely stable and is better than 2 in almost every way.*
-
-## Support for OpenDyslexic Typeface
-
-Fountainhead supports the open source dyslexia typeface, OpenDyslexic. The OpenDyslexic monospaced (and proportional) font can be downloaded here: [http://opendyslexic.org](http://opendyslexic.org)
-
-Instructions on how to install fonts are located in **Settings - Installing Fonts**.
-
-## Why Fountain?
-
-John August gives a great explanation on [the benefits of writing in Fountain.](http://johnaugust.com/2013/why-i-like-writing-in-fountain)
-
 ## Installation
 
 1. Download and install [Sublime Text](http://www.sublimetext.com).
@@ -354,33 +331,6 @@ If you want to change any of Fountainhead's settings, you must do so in your Fou
 
 \* Each setting should only have one active value.
 
-### Installing Fonts
-
-The steps below will install fonts onto your system, allowing them to be used in all programs, including Sublime Text.
-
-#### Mac
-
-1. Double-click the font file (usually ending in `.otf` or `.ttf`)
-2. The **Font Book** app will open and display the font
-3. Click `Install Font` on the bottom of the preview window
-
-#### Windows
-
-*Taken from [Microsoft](http://windows.microsoft.com/en-us/windows-vista/install-or-uninstall-fonts).*
-
-1. Open Fonts by clicking the `Start` button, clicking `Control Panel`, clicking `Appearance and Personalization`, and then clicking `Fonts`.
-2. Click `File`, and then click `Install New Font`.
-    - If you don't see the **File** menu, press `ALT`.
-3. In the **Add Fonts** dialog box, under **Drives**, click the drive where the font that you want to install is located.
-4. Under **Folders**, double-click the folder containing the fonts that you want to add.
-5. Under **List of fonts**, click the font that you want to add, and then click `Install`.
-
-#### Linux (Ubuntu)
-
-1. Double-click the font file (usually ending in `.otf` or `.ttf`)
-2. **Font Viewer** will launch and display the font
-3. Click `Install Font` in the lower right-hand corner of the preview window
-
 ## Key Bindings
 
 You can customize Fountainhead's key bindings by copying the desired default key binding and editing it in your user key bindings. Due to how many key bindings Fountainhead uses, changes made to key bindings can have unexpected results.
@@ -389,25 +339,6 @@ Key Bindings can be accessed at:
 
 `Tools > Fountainhead > Preferences > Key Bindings - Default`
 `Tools > Fountainhead > Preferences > Key Bindings - User`
-
-## FAQ
-
-- I have completed my Fountain masterpiece; now what?
-    - A good place to look for ways to convert your screenplay to a PDF or a Final Draft document, is the official [Fountain Apps](http://fountain.io/apps) page.
-    - An online solution that appears to convert Fountain files to PDFs well is [Writer Duet](https://writerduet.com/convert). You can also convert Fountain to Final Draft and Celtx.
-- Will Fountainhead ever have the ability to convert Fountain files to Final Draft or PDFs?
-    - I hope to add these features in the future.
-- I want to use a character name that ends with a period (e.g., JR.).
-    - Start the character name with an `@`.
-
-## Contribute
-
-- Issue Tracker: [https://github.com/derickc/Fountainhead/issues](https://github.com/derickc/Fountainhead/issues)
-- Source Code: [https://github.com/derickc/Fountainhead](https://github.com/derickc/Fountainhead)
-
-## Support
-
-Feel free to contact me at: `derick` at `unterrible` dot `com`.
 
 ## License
 
