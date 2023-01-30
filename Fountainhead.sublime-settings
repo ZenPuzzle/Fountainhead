@@ -44,7 +44,7 @@
 
     // Enables auto-completions of character and scene headings when the first character typed on a line is lowercase or a period
     "auto_complete": true,
-    "auto_complete_selector": "constant.character",
+    "auto_complete_selector": "text.fountain",
     "word_separators": "/\\()\"-:,;<>~!@#$%^&*|+=[]{}`~?",
     "draw_indent_guides": false,
 
@@ -91,7 +91,7 @@
     "fold_notes": false,
 
     // Automatically create a list of characters
-    "characters": true,
+    "characters": false,
 
     // Automatically create a list of scene headings
     "scenes": true,
@@ -107,7 +107,7 @@
 
     // Toggle key binding commands
     // Move cursor forward using shift + space
-    "forward_cursor": true,
+    "forward_cursor": false,
     // Toggle boneyard, synopses, and notes folding keyboard shortcuts
     "fold_text": true,
     // Toggle capitalizing of current line

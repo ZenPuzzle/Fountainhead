@@ -164,7 +164,7 @@
         <key>choices</key>
         <dict>
             <key>begin</key>
-            <string>(^\s*(CHOICES|CONDITION):\s*$)</string>
+            <string>(^\s*(CHOICES|CONDITION|ACTIONS):\s*$)</string>
             <key>end</key>
             <string>^\s*$</string>
             <key>beginCaptures</key>
@@ -173,7 +173,7 @@
                 <dict>
                     <key>name</key>
                     <!-- <string>entity.name.class</string> -->
-                    <string>keyword.operator</string>
+                    <string>keyword.control</string>
                 </dict>
             </dict>
             <key>patterns</key>
@@ -182,7 +182,7 @@
                     <key>name</key>
                     <string>keyword.operator</string>
                     <key>begin</key>
-                    <string>(^\s*\[(LINE|CON) [A-Z]\])</string>
+                    <string>(^\s*\[(LINE|CON|ACTION) [A-Z]\])</string>
                     <key>end</key>
                     <string>: </string>
                 </dict>
@@ -202,7 +202,7 @@
             <key>name</key>
             <string>keyword.operator</string>
             <key>begin</key>
-            <string>^\s*\[(LINE|CON) [A-Z]:\s*$</string>
+            <string>^\s*\[(LINE|CON|ACTION) [A-Z]:\s*$</string>
             <key>end</key>
             <string>^\s*$</string>
         </dict>
@@ -212,7 +212,7 @@
             <key>name</key>
             <string>keyword.operator</string>
             <key>begin</key>
-            <string>^\s*END OF (LINE|CON) [A-Z]\]:\s*$</string>
+            <string>^\s*END OF (LINE|CON|ACTION) [A-Z]\]:\s*$</string>
             <key>end</key>
             <string>^\s*$</string>
         </dict>

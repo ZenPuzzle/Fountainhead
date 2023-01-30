@@ -1,0 +1,12 @@
+[
+    {"command": "unindent"},
+    {"command": "unindent"},
+    {"command": "unindent"},
+    {"command": "unindent"},
+    {"command": "unindent"},
+    {"command": "indent"},
+    {"command": "indent"},
+    {"command": "indent"},
+    {"command": "indent"},
+    {"command": "insert", "args": {"characters": "\n\t[CON A]: [["}}
+]

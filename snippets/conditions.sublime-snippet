@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+            [CON ${1:A/B/C/D}:
+
+                ${2:What happens next?}
+
+            END OF CON $1]:
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>CON ... END OF CON</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.fountain</scope>
+	<description>Insert an outcome of a CONDITION</description>
+</snippet>
