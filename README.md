@@ -4,7 +4,7 @@
 - [Download the ZIP of this repository](https://github.com/ZenPuzzle/FountainheadChatFiction/archive/master.zip) and uncompress it.
 - Move the uncompressed **Fountainhead** folder to the appropriate packages directory:
     - In Sublime Text, select: `Sublime Text > Preferences > Browse Packages...`
-    - Place the **Fountainhead** folder inside the open **Packages** directory.
+    - Remove existing **Fountainhead** folder if you have one. Place the **Fountainhead** folder inside the open **Packages** directory.
 - Relaunch **Sublime Text**.
 
 ## Quickstart
