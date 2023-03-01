@@ -107,6 +107,12 @@
             <string>#notes</string>
         </dict>
 
+        <!-- Inline conditions -->
+        <dict>
+            <key>include</key>
+            <string>#inline_conditions</string>
+        </dict>
+
         <!-- Pagebreak -->
         <dict>
             <key>include</key>
@@ -187,12 +193,8 @@
                     <string>: </string>
                 </dict>
                 <dict>
-                    <key>name</key>
-                    <string>variable.parameter</string>
-                    <key>begin</key>
-                    <string>\[\[\s*(?=\S)</string>
-                    <key>end</key>
-                    <string>\]\]</string>
+                    <key>include</key>
+                    <string>#markup</string>
                 </dict>
             </array>
         </dict>
@@ -309,6 +311,17 @@
             <string>\[\[\s*(?=\S)</string>
             <key>end</key>
             <string>\]\]</string>
+        </dict>
+
+        <!-- Inline conditions -->
+        <key>inline_conditions</key>
+        <dict>
+            <key>name</key>
+            <string>variable.parameter</string>
+            <key>begin</key>
+            <string>\{\s*(?=\S)</string>
+            <key>end</key>
+            <string>\}</string>
         </dict>
 
         <!-- Scene Headings -->
@@ -466,6 +479,10 @@
                         <dict>
                             <key>include</key>
                             <string>#notes</string>
+                        </dict>
+                        <dict>
+                            <key>include</key>
+                            <string>#inline_conditions</string>
                         </dict>
                         <dict>
                             <key>include</key>
