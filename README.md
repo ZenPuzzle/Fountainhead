@@ -1,7 +1,7 @@
 ## Installation
 
 1. Download and install [Sublime Text](http://www.sublimetext.com).
-- [Download the ZIP of this repository](https://github.com/ZenPuzzle/FountainheadChatFiction/archive/master.zip) and uncompress it.
+- [Download the ZIP of this repository](https://github.com/ZenPuzzle/Fountainhead/archive/master.zip) and uncompress it.
 - Move the uncompressed **Fountainhead** folder to the appropriate packages directory:
     - In Sublime Text, select: `Sublime Text > Preferences > Browse Packages...`
     - Remove existing **Fountainhead** folder if you have one. Place the **Fountainhead** folder inside the open **Packages** directory.

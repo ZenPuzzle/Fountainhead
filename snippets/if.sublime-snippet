@@ -1,14 +1,15 @@
 <snippet>
 	<content><![CDATA[
-            [LINE ${1:A/B/C/D}:
+if ${1:EXAMPLE_VARIABLE == 1}:
 
-                ${2:What happens next?}
+${2:What happens next?}
+${0}
 
-            END OF LINE $1]:
+fi
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>LINE ... END OF LINE</tabTrigger>
+	<tabTrigger>if ... fi</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>text.fountain</scope>
-	<description>Insert an outcome of a CHOICE</description>
+	<description>if ... elif ... fi</description>
 </snippet>

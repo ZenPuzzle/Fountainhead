@@ -8,5 +8,5 @@
     {"command": "indent"},
     {"command": "indent"},
     {"command": "indent"},
-    {"command": "insert", "args": {"characters": "\n\t[ACTION A]: "}}
+    {"command": "insert", "args": {"characters": "\n    A: "}}
 ]

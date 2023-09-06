@@ -1,14 +1,14 @@
 <snippet>
 	<content><![CDATA[
-            [ACTION ${1:A/B/C/D}:
+            [${1:A/B/C/D}:
 
                 ${2:What happens next?}
 
-            END OF ACTION $1]:
+            END OF $1]:
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>ACTION ... END OF ACTION</tabTrigger>
+	<tabTrigger>A: B: C: D: ACTIONS / CHOICES / LINE ... END OF ACTION / CHOICES</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>text.fountain</scope>
-	<description>Insert an outcome of an ACTION</description>
+	<description>Insert an outcome of ACTIONS or CHOICES</description>
 </snippet>

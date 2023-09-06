@@ -74,6 +74,7 @@
     "auto_complete_commit_on_tab": true,
     "tab_completion": true,
     "auto_complete_with_fields": true,
+    "auto_match_enabled": false,
 
     // Automatically save your progress
     "auto_save": false,
@@ -111,9 +112,9 @@
     // Toggle boneyard, synopses, and notes folding keyboard shortcuts
     "fold_text": true,
     // Toggle capitalizing of current line
-    "cap_current_line": true,
+    "cap_current_line": false,
     // Automatically capitalize scene headings, transitions, and character names when pressing Return
-    "line_cap": true,
+    "line_cap": false,
     // Automatically places a blank line after scene headings, action, and transitions
     "auto_line": true,
     // Automatically wrap/unwrap text when using markdown text emphasis

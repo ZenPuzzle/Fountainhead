@@ -1,0 +1,79 @@
+%YAML 1.2
+---
+name: Fountain
+file_extensions:
+- fountain
+scope: text.fountain
+contexts:
+  main:
+  - scope: comment
+    match: \#.*$
+  - scope: keyword.conditional
+    match: ^\s*if\b
+  - scope: keyword.conditional
+    match: ^\s*elif\b
+  - scope: keyword.conditional
+    match: ^\s*\bfi\b
+  - scope: entity.name.function
+    match: (^[A-Z][A-Z0-9_]*\s+joins\b)
+  - scope: entity.name.function
+    match: (^[A-Z][A-Z0-9_]*\s+leaves\b)
+  - scope: markup.heading
+    match: (^Chapter \d+)
+  - scope: keyword.control
+    match: (^ {4}[A-Z]\b( -> [^\n#:]+)?)
+  - scope: variable.parameter
+    match: ^ {4}IMAGE\b
+  - scope: text
+    match: (^ {4}"{0,2}[^\s\n#"][^\n#]*)
+  - scope: keyword.control
+    match: (^ {12}\[[A-Z]:)
+  - scope: keyword.control
+    match: (^ {12}END OF [A-Z]\]:)
+  - scope: keyword.control
+    match: (^ {16}CHOICES:)
+  - scope: keyword.control
+    match: (^ {16}ACTIONS:)
+  - scope: string
+    match: (^ {16}THE +END\b)
+  - scope: string
+    match: (^ {16}[A-Z][A-Z0-9_]*\b)
+  - scope: punctuation
+    match: \(
+  - scope: punctuation
+    match: \)
+  - scope: punctuation
+    match: \[+
+  - scope: punctuation
+    match: \]+
+  - scope: punctuation
+    match: ':'
+  - scope: punctuation
+    match: ','
+  - scope: keyword.operator
+    match: ==
+  - scope: keyword.operator
+    match: '!='
+  - scope: keyword.operator
+    match: '='
+  - scope: keyword.operator
+    match: \+=
+  - scope: keyword.operator
+    match: '>'
+  - scope: keyword.operator.word
+    match: \band\b
+  - match: '"""'
+    push: quoted_phrase
+  - scope: constant.numeric
+    match: (\d+)
+  - scope: markup.raw
+    match: ("[^\n\"]*")
+  - scope: variable.name
+    match: \b[A-Za-z][A-Za-z0-9_.]*\b
+  - scope: text
+    match: '[^\s\n#"\[\]][^\n#\[\]]+[^\s\n#\[\]"]|[^\n#\s]'
+  quoted_phrase:
+  - meta_scope: markup.raw
+  - match: '"""'
+    pop: true
+

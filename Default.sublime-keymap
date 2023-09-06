@@ -19,68 +19,6 @@
         ]
     },
 
-    // Show Character List
-
-    { "keys": ["super+shift+c"], "command": "show_characters", 
-    "context":
-        [
-            { "key": "auto_complete_visible", "operator": "equal", "operand": false },
-            { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true },
-            { "key": "setting.characters", "operator": "equal", "operand": true}
-        ]
-    },
-
-    // Show Scene List
-
-    { "keys": ["super+shift+s"], "command": "show_scenes", 
-    "context":
-        [
-            { "key": "auto_complete_visible", "operator": "equal", "operand": false },
-            { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true },
-            { "key": "setting.scenes", "operator": "equal", "operand": true}
-        ]
-    },
-
-
-    // Show and Hide Boneyard, Synopses, and Notes
-
-    // Toggles Boneyard
-    { "keys": ["ctrl+k", "ctrl+/"], "command": "hide_boneyard", 
-    "context":
-        [
-            { "key": "auto_complete_visible", "operator": "equal", "operand": false },
-            { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true },
-            { "key": "setting.fold_text", "operator": "equal", "operand": true}
-        ]
-    },
-
-    // Toggle Synopses
-    { "keys": ["ctrl+k", "ctrl+="], "command": "hide_synopses", 
-    "context":
-    [
-        { "key": "auto_complete_visible", "operator": "equal", "operand": false },
-        { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true },
-        { "key": "setting.fold_text", "operator": "equal", "operand": true}
-    ]   },
-
-    // Toggle Notes
-    { "keys": ["ctrl+k", "ctrl+["], "command": "hide_notes", 
-    "context":
-    [
-        { "key": "auto_complete_visible", "operator": "equal", "operand": false },
-        { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true },
-        { "key": "setting.fold_text", "operator": "equal", "operand": true}
-    ]   },
-
-    // Capitalize current line (while remaining on that line)
-    { "keys": ["ctrl+k", "k"], "command": "cap_current_line", 
-    "context":
-    [
-        { "key": "auto_complete_visible", "operator": "equal", "operand": false },
-        { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true },
-        { "key": "setting.cap_current_line", "operator": "equal", "operand": true}
-    ]   },
-
     // Capitalize character names and minor scene headings; doesn't capitalize notes, comments, and title page.
     { "keys": ["enter"], "command": "run_macro_file", "args": {
     "file": "Packages/Fountainhead/macros/CapLine.sublime-macro"}, 
@@ -148,7 +86,7 @@
     "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true },
-            { "key": "selector", "operator": "equal", "operand": "dialogue", "match_all": true },
+//            { "key": "selector", "operator": "equal", "operand": "text", "match_all": true },
             { "key": "preceding_text", "operator": "text", "operator": "regex_contains", "operand": "[!|.|?|_|*|\"|-][ \t]*$"},
             { "key": "selector", "operator": "not_equal", "operand": "variable.parameter", "match_all": true },
             { "key": "selector", "operator": "not_equal", "operand": "comment", "match_all": true },
@@ -508,67 +446,7 @@
         ]
     },
 
-    //Insert [LINE X]: when appropriate
-    { "keys": ["enter"], "command": "run_macro_file", "args": {"file": "Packages/Fountainhead/macros/AfterChoices.sublime-macro"},
-    "context":
-        [
-            { "key": "preceding_text", "operator": "regex_contains", "operand": "CHOICES:"},
-            { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true }
-        ]
-    },
-    { "keys": ["enter"], "command": "insert", "args": {"characters": "\n    [LINE B]: "},
-    "context":
-        [
-            { "key": "preceding_text", "operator": "regex_contains", "operand": "^    \\[LINE A\\]: .*"},
-            { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true }
-        ]
-    },
-    { "keys": ["enter"], "command": "insert", "args": {"characters": "\n    [LINE C]: "},
-    "context":
-        [
-            { "key": "preceding_text", "operator": "regex_contains", "operand": "^    \\[LINE B\\]: .*"},
-            { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true }
-        ]
-    },
-    { "keys": ["enter"], "command": "insert", "args": {"characters": "\n    [LINE D]: "},
-    "context":
-        [
-            { "key": "preceding_text", "operator": "regex_contains", "operand": "^    \\[LINE C\\]: .*"},
-            { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true }
-        ]
-    },
-
-    //Insert [CON X]: when appropriate
-    { "keys": ["enter"], "command": "run_macro_file", "args": {"file": "Packages/Fountainhead/macros/AfterCondition.sublime-macro"},
-    "context":
-        [
-            { "key": "preceding_text", "operator": "regex_contains", "operand": "CONDITION:"},
-            { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true }
-        ]
-    },
-    { "keys": ["enter"], "command": "insert", "args": {"characters": "\n    [CON B]: [["},
-    "context":
-        [
-            { "key": "preceding_text", "operator": "regex_contains", "operand": "^    \\[CON A\\]: .*"},
-            { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true }
-        ]
-    },
-    { "keys": ["enter"], "command": "insert", "args": {"characters": "\n    [CON C]: [["},
-    "context":
-        [
-            { "key": "preceding_text", "operator": "regex_contains", "operand": "^    \\[CON B\\]: .*"},
-            { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true }
-        ]
-    },
-    { "keys": ["enter"], "command": "insert", "args": {"characters": "\n    [CON D]: [["},
-    "context":
-        [
-            { "key": "preceding_text", "operator": "regex_contains", "operand": "^    \\[CON C\\]: .*"},
-            { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true }
-        ]
-    },
-
-    //Insert [ACTION X]: when appropriate
+    //Insert "A:" after ACTIONS: and auto-indent line
     { "keys": ["enter"], "command": "run_macro_file", "args": {"file": "Packages/Fountainhead/macros/AfterActions.sublime-macro"},
     "context":
         [
@@ -576,40 +454,49 @@
             { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true }
         ]
     },
-    { "keys": ["enter"], "command": "insert", "args": {"characters": "\n    [ACTION B]: "},
+    //Insert A: after CHOICES: and auto-indent line
+    { "keys": ["enter"], "command": "run_macro_file", "args": {"file": "Packages/Fountainhead/macros/AfterChoices.sublime-macro"},
     "context":
         [
-            { "key": "preceding_text", "operator": "regex_contains", "operand": "^    \\[ACTION A\\]: .*"},
+            { "key": "preceding_text", "operator": "regex_contains", "operand": "CHOICES:"},
             { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true }
         ]
     },
-    { "keys": ["enter"], "command": "insert", "args": {"characters": "\n    [ACTION C]: "},
+    // Insert B: C: D: when appropiate
+    { "keys": ["enter"], "command": "insert", "args": {"characters": "\n    B: "},
     "context":
         [
-            { "key": "preceding_text", "operator": "regex_contains", "operand": "^    \\[ACTION B\\]: .*"},
+            { "key": "preceding_text", "operator": "regex_contains", "operand": "^    A: .*"},
             { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true }
         ]
     },
-    { "keys": ["enter"], "command": "insert", "args": {"characters": "\n    [ACTION D]: "},
+    { "keys": ["enter"], "command": "insert", "args": {"characters": "\n    C: "},
     "context":
         [
-            { "key": "preceding_text", "operator": "regex_contains", "operand": "^    \\[ACTION C\\]: .*"},
+            { "key": "preceding_text", "operator": "regex_contains", "operand": "^    B: .*"},
+            { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true }
+        ]
+    },
+    { "keys": ["enter"], "command": "insert", "args": {"characters": "\n    D: "},
+    "context":
+        [
+            { "key": "preceding_text", "operator": "regex_contains", "operand": "^    C: .*"},
             { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true }
         ]
     },
 
-    // Delete [LINE|CON|ACTION X]: if appropriate
+    // Delete A-D: if appropriate
     { "keys": ["enter"], "command": "run_macro_file", "args": {"file": "Packages/Fountainhead/macros/ClearCurrentLine.sublime-macro"},
     "context":
         [
-            { "key": "preceding_text", "operator": "regex_contains", "operand": "^    \\[(LINE|CON|ACTION) .\\]: *\\[?\\[?$"},
+            { "key": "preceding_text", "operator": "regex_contains", "operand": "^    [A-Z]: *\\[?\\[?$"},
             { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true }
         ]
     },
     { "keys": ["backspace"], "command": "run_macro_file", "args": {"file": "Packages/Fountainhead/macros/ClearCurrentLine.sublime-macro"},
     "context":
         [
-            { "key": "preceding_text", "operator": "regex_contains", "operand": "^    \\[(LINE|CON|ACTION) .\\]: *\\[?\\[?$"},
+            { "key": "preceding_text", "operator": "regex_contains", "operand": "^    [A-Z]: *\\[?\\[?$"},
             { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true }
         ]
     },
@@ -618,7 +505,7 @@
     { "keys": ["enter"], "command": "run_macro_file", "args": {"file": "Packages/Fountainhead/macros/AfterCharacter.sublime-macro"},
     "context":
         [
-            { "key": "preceding_text", "operator": "regex_contains", "operand": "^\\s*[A-Z]+$", "match_all": true},
+            { "key": "preceding_text", "operator": "regex_contains", "operand": "^\\s*[A-Z][A-Z0-9_]+$", "match_all": true},
             { "key": "selector", "operator": "equal", "operand": "text.fountain", "match_all": true }
         ]
     },
