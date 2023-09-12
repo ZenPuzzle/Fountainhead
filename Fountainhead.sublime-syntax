@@ -60,9 +60,23 @@ contexts:
   - scope: keyword.operator
     match: \+=
   - scope: keyword.operator
+    match: \+
+  - scope: keyword.operator
+    match: '-'
+  - scope: keyword.operator
+    match: \*
+  - scope: keyword.operator
+    match: /
+  - scope: keyword.operator
     match: '>'
+  - scope: keyword.operator
+    match: <
   - scope: keyword.operator.word
     match: \band\b
+  - scope: keyword.operator.word
+    match: \bor\b
+  - scope: keyword.operator.word
+    match: \bnot\b
   - scope: constant.numeric
     match: (\d+)
   - scope: markup.raw
