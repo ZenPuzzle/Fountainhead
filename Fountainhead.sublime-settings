@@ -76,6 +76,12 @@
     "auto_complete_with_fields": true,
     "auto_match_enabled": false,
 
+	// Word list to use for spell checking. May also be a list of dictionaries.
+	"dictionary": "Packages/Fountainhead/Russian.dic",
+
+	// Sets which scopes are checked for spelling errors
+	"spelling_selector": "-(entity, source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag, markup.heading)",
+
     // Automatically save your progress
     "auto_save": false,
     // Saves after the desired number of key strokes; useful when used with a program like Marked 2
