@@ -6,10 +6,7 @@
     // 4. Edit > Paste (⌘V / ⌃V)
     // 5. Comment/Uncomment (⌘/ / ⌃/ or by adding/deleting the // at the beginning of the line) or Edit the value of the setting you want to change (Note: Each setting should only have one active value)
     // 6. Save (⌘S / ⌃S)
-    "extensions":
-    [
-    "fountain"
-    ],
+    "extensions": ["fountain"],
     // Monospaced Fonts
     // Find more fonts at: http://www.fontsquirrel.com/fonts/list/classification/monospaced
     // "font_face": "Menlo",
@@ -41,70 +38,94 @@
     // "color_scheme": "Packages/Fountainhead/schemes/SolarizedDark.tmTheme",
     // "color_scheme": "Packages/Fountainhead/schemes/SolarizedLight.tmTheme",
 
+    // Characters that are considered to separate words
+    "word_separators": "/\\()\"-:,;<>~!@#$%^&*|+=[]{}`~?",
 
-    // Enables auto-completions of character and scene headings when the first character typed on a line is lowercase or a period
+    // These settings hide various parts of the UI automatically when typing.
+    // Moving the mouse will show them again.
+    "auto_hide_menu": false,
+    "auto_hide_tabs": false,
+    "auto_hide_status_bar": false,
+    // When false, disables alt-tapping revealing the menu when hidden on Linux
+    // and Windows. Does not affect auto hiding or toggling the menu through
+    // the command palette.
+    "reveal_menu": false,
+
+    // Display the toggle sidebar button in the status bar
+    "show_sidebar_button": false,
+
+    // remember_full_screen will allow Sublime Text to start in full screen
+    // mode if it was exited in full screen mode. When set to false, Sublime
+    // Text will never start in full screen mode.
+    "remember_full_screen": false,
+
+    // Enables auto-completions
     "auto_complete": true,
     "auto_complete_selector": "text.fountain",
-    "word_separators": "/\\()\"-:,;<>~!@#$%^&*|+=[]{}`~?",
-    "draw_indent_guides": true,
+    "auto_complete_commit_on_tab": true,
+    "tab_completion": true,
+    // Controls if auto complete is shown when snippet fields are active.
+    // Only relevant if auto_complete_commit_on_tab is true.
+    "auto_complete_with_fields": true,
 
-    // Always show fold buttons in the gutter
-    "fade_fold_buttons": false,
+    // Set to false to turn off the indentation guides.
+    // The color and width of the indent guides may be customized by editing
+    // the corresponding .tmTheme file, and specifying the colors "guide",
+    // "activeGuide" and "stackGuide"  
+    "draw_indent_guides": true,
     "indent_subsequent_lines": true,
     "auto_indent": false,
+    // Trims white space added by auto_indent when moving the caret off the
+    // line.
+    "trim_automatic_white_space": true,
+
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "use_tab_stops": true,
+    // By default, shift+tab will only unindent if the selection spans
+    // multiple lines. When pressing shift+tab at other times, it'll insert a
+    // tab character - this allows tabs to be inserted when tab_completion is
+    // enabled. Set this to true to make shift+tab always unindent, instead of
+    // inserting tabs.
+    "shift_tab_unindent": true, 
     "draw_white_space": ["selection", "isolated"], //"all" "none" "selection"
+
+    // Disables horizontal scrolling if enabled.
+    // May be set to true, false, or "auto", where it will be disabled for
+    // source code, and otherwise enabled.
     "word_wrap": true,
-    "wrap_width": 62,
-    "gutter": true,
+    // Set to a value other than 0 to force wrapping at that column rather than
+    // the window width. See "wrap_width_style" for extra options.
+    "wrap_width": 64,
+
+    // Set to false to hide the gutter altogether
+    "gutter": false,
+    // Spacing between the gutter and the text
     "margin": 0,
+    "line_numbers": true,
+    // Always show fold buttons in the gutter
+    "fold_buttons": false,
+    "fade_fold_buttons": false,
+
     "caret_extra_top": 2,
     "caret_extra_bottom": 2,
     "caret_extra_width": 0,
     "line_padding_top": 1,
+
     "highlight_line": true,
     "draw_centered": true,
-    "spell_check": true,
-    "fold_buttons": true,
-    "trim_automatic_white_space": true,
-    "line_numbers": false,
-    "tab_size": 4,
-    "translate_tabs_to_spaces": true,
-    "use_tab_stops": true,
-    "shift_tab_unindent": true,
-    "auto_complete_commit_on_tab": true,
-    "tab_completion": true,
-    "auto_complete_with_fields": true,
+
+    // Controls auto pairing of quotes, brackets etc
     "auto_match_enabled": false,
 
+    "spell_check": true,
 	// Word list to use for spell checking. May also be a list of dictionaries.
 	"dictionary": "Packages/Fountainhead/Russian.dic",
-
 	// Sets which scopes are checked for spelling errors
 	"spelling_selector": "-(entity, source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag, markup.heading)",
 
-    // Automatically save your progress
-    "auto_save": false,
-    // Saves after the desired number of key strokes; useful when used with a program like Marked 2
-    "auto_save_count": 42,
     // Saves when you go to another window or bring up an overlay
     "save_on_focus_lost": false,
-
-    // Automatically scrolls the page up when you reach the bottom of the screen
-    "auto_scroll": true,
-
-    // Automatically hides Boneyard, Synopses, or Notes when opening a .fountain file
-    "fold_boneyard": false,
-    "fold_synopses": false,
-    "fold_notes": false,
-
-    // Automatically create a list of characters
-    "characters": false,
-
-    // Automatically create a list of scene headings
-    "scenes": true,
-
-    // Automatically add (CONT'D) to character names
-    "contd": false,
 
     // Add a blank line (double line space) after dialogue (lyrics have single line spaces)
     "dialogue_double_line_space": true,
@@ -115,8 +136,6 @@
     // Toggle key binding commands
     // Move cursor forward using shift + space
     "forward_cursor": false,
-    // Toggle boneyard, synopses, and notes folding keyboard shortcuts
-    "fold_text": true,
     // Toggle capitalizing of current line
     "cap_current_line": false,
     // Automatically capitalize scene headings, transitions, and character names when pressing Return
