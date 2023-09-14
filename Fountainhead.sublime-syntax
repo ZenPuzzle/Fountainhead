@@ -32,7 +32,7 @@ contexts:
   - scope: variable.parameter
     match: ^ {4}IMAGE\b
   - match: ^ {4}$
-    scope: markup.raw
+    push: blank_line
   - match: ^ {4}
     push: inline_markdown
   - match: ^ {1,3}
@@ -87,6 +87,10 @@ contexts:
     match: ("[^\n\"]*")
   - scope: variable.name
     match: \b[A-Za-z][A-Za-z0-9_.]*\b
+  blank_line:
+  - meta_content_scope: markup.raw
+  - match: ^
+    pop: true
   inline_markdown:
   - meta_scope: text
   - match: __
