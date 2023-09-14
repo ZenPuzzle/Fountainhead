@@ -38,22 +38,6 @@
     // "color_scheme": "Packages/Fountainhead/schemes/SolarizedDark.tmTheme",
     // "color_scheme": "Packages/Fountainhead/schemes/SolarizedLight.tmTheme",
 
-    // Characters that are considered to separate words
-    "word_separators": "/\\()\"-:,;<>~!@#$%^&*|+=[]{}`~?",
-
-    // These settings hide various parts of the UI automatically when typing.
-    // Moving the mouse will show them again.
-    "auto_hide_menu": false,
-    "auto_hide_tabs": false,
-    "auto_hide_status_bar": false,
-    // When false, disables alt-tapping revealing the menu when hidden on Linux
-    // and Windows. Does not affect auto hiding or toggling the menu through
-    // the command palette.
-    "reveal_menu": false,
-
-    // Display the toggle sidebar button in the status bar
-    "show_sidebar_button": false,
-
     // remember_full_screen will allow Sublime Text to start in full screen
     // mode if it was exited in full screen mode. When set to false, Sublime
     // Text will never start in full screen mode.
