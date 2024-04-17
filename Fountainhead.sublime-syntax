@@ -7,30 +7,37 @@ scope: text.fountain
 contexts:
   main:
   - include: comments
+  - include: templates
   - scope: keyword.conditional
     match: ^\s*if\b
   - scope: keyword.conditional
     match: ^\s*elif\b
   - scope: keyword.conditional
     match: ^\s*\bfi\b
+  - scope: keyword.conditional
+    match: ^\s*repeat\b
+  - scope: keyword.conditional
+    match: ^\s*until\b
   - scope: keyword.control
     match: (^ {16}CHOICES:)
   - scope: keyword.control
     match: (^ {16}ACTIONS:)
-  - scope: string
-    match: (^ {16}THE +END\b)
   - scope: string
     match: (^ {16}[A-Z][A-Z0-9_]*\b)
   - scope: keyword.control
     match: (^ {12}\[[A-Z]:)
   - scope: keyword.control
     match: (^ {12}END OF [A-Z]\]:)
-  - match: '(^ {4}([A-Z]( -> [^\n#:]+)?): +([^\n#\[]*))'
+  - match: '(^ {4}([A-Z])( (->) ([^\n#:]+))?: +([^\n#\[]*))'
     captures:
       2: keyword.control
-      3: text
+      4: keyword.operator
+  - scope: entity.name.function
+    match: (^ {4}@[A-Za-z0-9]+$)
   - scope: variable.parameter
     match: ^ {4}IMAGE\b
+  - scope: variable.parameter
+    match: ^ {4}COLLECTIBLE\b
   - match: ^ {4}$
     push: blank_line
   - match: ^ {4}
@@ -64,6 +71,8 @@ contexts:
   - scope: keyword.operator
     match: \+=
   - scope: keyword.operator
+    match: -=
+  - scope: keyword.operator
     match: \+
   - scope: keyword.operator
     match: '-'
@@ -71,6 +80,8 @@ contexts:
     match: \*
   - scope: keyword.operator
     match: /
+  - scope: keyword.operator
+    match: '%'
   - scope: keyword.operator
     match: '>'
   - scope: keyword.operator
@@ -93,6 +104,7 @@ contexts:
     pop: true
   inline_markdown:
   - meta_scope: text
+  - include: templates
   - match: __
     push: italic
   - match: \*\*
@@ -104,6 +116,7 @@ contexts:
   italic:
   - meta_scope: markup.italic
   - include: comments
+  - include: templates
   - match: \*\*
     push: bold
   - match: __
@@ -111,6 +124,7 @@ contexts:
   bold:
   - meta_content_scope: markup.bold
   - include: comments
+  - include: templates
   - match: __
     push: italic
   - match: \*\*
@@ -118,9 +132,33 @@ contexts:
   monospace:
   - meta_content_scope: markup.raw.inline
   - include: comments
+  - include: templates
   - match: '`'
     pop: true
   comments:
   - scope: comment
     match: \#.*$
+  templates:
+  - scope: entity.name.tag
+    match: \{%\s+macro\b
+  - scope: entity.name.tag
+    match: \{%\s+endmacro\b
+  - scope: entity.name.tag
+    match: \{%\s+for
+  - scope: entity.name.tag
+    match: \{%\sendfor
+  - scope: entity.name.tag
+    match: \{%\s+if
+  - scope: entity.name.tag
+    match: \{%\s+endif
+  - scope: entity.name.tag
+    match: \{%\s+set
+  - scope: entity.name.tag
+    match: \{%
+  - scope: entity.name.tag
+    match: '%\}'
+  - scope: entity.name.tag
+    match: \{\{
+  - scope: entity.name.tag
+    match: \}\}
 
