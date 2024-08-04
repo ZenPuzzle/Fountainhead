@@ -96,8 +96,12 @@ contexts:
     match: (\d+)
   - scope: markup.raw
     match: ("[^\n\"]*")
+  - scope: keyword.control
+    match: \bhref\b
+  - scope: keyword.control
+    match: \bweight\b
   - scope: variable.name
-    match: \b[A-Za-z][A-Za-z0-9_.]*\b
+    match: \b[A-Za-z_][A-Za-z0-9_.]*\b
   blank_line:
   - meta_content_scope: markup.raw
   - match: ^
